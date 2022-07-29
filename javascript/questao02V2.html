@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 02V2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/meucss.css" rel="stylesheet">
+</head>
+
+<body>
+    <form>
+        <div class="form-group">
+            <label for="num1">Digite o 1º número: </label><br>
+            <input name="num1" type="number" placeholder="0" id="num1"><br>
+            <label for="num2">Digite o 2º número: </label><br>
+            <input name="num2" type="number" placeholder="0" id="num2"><br>
+            <label for="num3">Digite o 3º número: </label><br>
+            <input name="num3" type="number" placeholder="0" id="num3"><br>
+            <label for="num4">Digite o 4º número: </label><br>
+            <input name="num4" type="number" placeholder="0" id="num4"><br>
+
+            <label for="media"> A media é :</label><br>
+            <input name="media" type="number" placeholder="0" id="media" readonly><br>
+
+            <h6>
+                <input type="button" class="btn btn-primary" onclick="med()" value="MÉDIA">
+            </h6>
+
+        </div>
+    </form>
+    <script>
+        function med() {
+            var numero1 = parseFloat(document.getElementById("num1").value);
+            var numero2 = parseFloat(document.getElementById("num2").value);
+            var numero3 = parseFloat(document.getElementById("num3").value);
+            var numero4 = parseFloat(document.getElementById("num4").value);
+
+            //processamento
+            var soma = numero1 + numero2 + numero3 + numero4;
+            var media = soma / 4;
+
+            console.log(media);
+
+            //saida
+            document.getElementById("media").value = media;
+
+        }
+    </script>
+</body>
+
+</html>

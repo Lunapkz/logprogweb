@@ -12,39 +12,38 @@
 
 <body>
     <form>
-        <h5>1- Calcule a área com base nos seguintes dados: </h5>
         <div class="form-group">
 
-            <label for="bas"> Base:</label><br>
-            <input name="bas" type="number" placeholder="0.0 m" id="bas"><br>
+            <label for="base"> Base:</label><br>
+            <input name="base" type="number" placeholder="0.0 m" id="base"><br>
 
-            <label for="alt"> Altura:</label><br>
-            <input name="alt" type="number" placeholder="0.0 m" id="alt"><br>
+            <label for="altura"> Altura:</label><br>
+            <input name="altura" type="number" placeholder="0.0 m" id="altura"><br>
 
-            <label for="are"> A Área é de :</label><br>
-            <input name="are" type="number" placeholder="0.0 m²" id="are" readonly><br>
+            <label for="area"> A Área é de :</label><br>
+            <input name="area" type="number" placeholder="0.0 m²" id="area" readonly><br>
 
-            <h6> <input type="button" class="btn btn-primary" onclick="calculaArea2()" value="Calcular Área"></h6>
+            <input type="button" class="btn btn-primary" onclick="calculaArea2()" value="Calcular Área">
 
         </div>
     </form>
-<script src="exemplos.js"></script>
+
+    <script src="exemplos.js"></script>
     <script>
 
         function calculaArea() {
             //recuperação de entradas de dados
-            var bas = document.getElementById("bas").value;
-            let alt = document.getElementById("alt").value;
+            var base = document.getElementById("base").value;
+            let altura = document.getElementById("altura").value;
 
             //processamento
 
-            var are = (bas * alt) / 2;
+            var area = (base * altura) / 2;
 
-            document.getElementById("are").value = are;
+            document.getElementById("are").value = area;
 
         }
 
     </script>
 </body>
-
 </html>
