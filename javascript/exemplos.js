@@ -102,7 +102,53 @@ function pesonotaAlert() {
     window.alert("A Média é " + media);
 
 }
+function novosalario() {
+    //recuperação de entrada de dados
+    let salarioinicial = parseFloat(document.getElementById("salarioinicial").value);
+    let porcentagem = parseFloat(document.getElementById("porcentagem").value);
 
+    //processamento
+
+    let novosalario = salarioinicial + (salarioinicial * porcentagem) / 100;
+
+    console.log(novosalario);
+
+    //saida
+    document.getElementById("novosalarioex").value = novosalario;
+
+}
+function salarionovoAlert() {
+    //recuperação de entrada de dados
+    let salarioinicial = parseFloat(window.prompt("Salário Inicial: "));
+    let porcentagem = parseFloat(window.prompt("Porcetagem de Aumento: "));
+
+    //processamento
+
+    let novosalario = salarioinicial + (salarioinicial * porcentagem) / 100;
+
+    //saida
+    window.alert("O seu novo salário é: " + novosalario);
+
+}
+function salarioliquidoAlert() {
+    //recuperação de entrada de dados
+
+    let salariobase = parseFloat(window.prompt("Salário Bruto: ").value);
+    let dependentes = parseFloat(window.prompt("Número de Dependentes: ").value);
+    let salariofami = parseFloat(window.prompt("Salário Família: ").value);
+    let imposto = parseFloat(window.prompt("Imposto: ").value);
+
+    //processamento
+
+    var salariobruto = salariobase + (dependentes * salariofami);
+
+    var salarioliquido = salariobruto - (salariobruto * imposto) / 100;
+
+    console.log(salarioliquido);
+
+    //saida
+    window.alert("O seu salário liquido é: " + salarioliquido);
+}
 function calculaArea2() {
     //recuperação de entradas de dados
     var bas = document.getElementById("base").value;
@@ -115,6 +161,6 @@ function calculaArea2() {
     document.getElementById("area").value = area;
 }
 
-function novosalario() {
+function sd() {
 
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <meta charset="UTF-8">
+    <title>Questão 4V2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/meucss.css" rel="stylesheet">
+</HEAD>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="salarioinicial">Salário Inicial: </label><br>
+            <input name="salarioinicial" type="number" placeholder="0" id="salarioinicial"><br>
+            <label for="porcentagem">Porcetagem de Aumento: </label><br>
+            <input name="porcentagem" type="number" placeholder="0" id="porcentagem"><br>
+
+            <label for="novosalarioex">O seu novo salário é: </label><br>
+            <input name="novosalarioex" type="number" placeholder="0" readonly id="novosalarioex"><br>
+
+            <h6>
+                <input type="button"class="btn btn-primary" onclick="novosalario()" value="CALCULAR"><BR>
+            </h6>
+        </div>
+    </form>
+    <script>
+        function novosalario(){
+            let salarioinicial = parseFloat(document.getElementById("salarioinicial").value);
+            let porcentagem    = parseFloat(document.getElementById("porcentagem").value);
+
+            let novosalario = salarioinicial + (salarioinicial * porcentagem) / 100;
+
+            console.log(novosalario);
+            
+            document.getElementById("novosalarioex").value = novosalario;
+
+        }
+    </script>
+</body>
+</HTML>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 05V2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/meucss.css" rel="stylesheet">
+</head>
+
+<body>
+    <form>
+        <div class="form-group">
+            <label for="salbruto">Salário Bruto: </label><br>
+            <input name="salbruto" type="number" placeholder="0" id="salbruto"><br>
+            <label for="dependen">Número de Dependentes: </label><br>
+            <input name="dependen" type="number" placeholder="0" id="dependen"><br>
+            <label for="salfamil">Salário Família: </label><br>
+            <input name="salfamil" type="number" placeholder="32" id="salfamil" readonly><br>
+            <label for="imposto">Imposto: </label><br>
+            <input name="imposto" type="number" placeholder="27,5" id="imposto" readonly><br>
+
+            <label for="salarioLiquidoex"> O seu Salário liquido é: :</label><br>
+            <input name="salarioLiquidoex" type="number" placeholder="0" id="salarioLiquidoex" readonly><br>
+
+            <h6>
+                <input type="button" class="btn btn-primary" onclick="salarioli()" value="MÉDIA">
+            </h6>
+
+        </div>
+    </form>
+    <script>
+        function salarioli() {
+            var numero1 = parseFloat(document.getElementById("salbruto").value);
+            var numero2 = parseFloat(document.getElementById("dependen").value);
+            var numero3 = parseFloat(document.getElementById("salfamil").value);
+            var numero4 = parseFloat(document.getElementById("imposto").value);
+
+            //processamento
+            var calc1 = salbruto + (dependen * salfamil);
+
+           var  salarioliquido = calc1 - (calc1 * imposto) / 100;
+
+            console.log(salarioliquido);
+
+            //saida
+            document.getElementById("salarioLiquidoex").value = salarioliquido;
+
+        }
+    </script>
+</body>
+
+</html>

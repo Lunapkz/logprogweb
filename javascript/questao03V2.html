@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 3V2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/meucss.css" rel="stylesheet">
+</head>
+
+<body>
+    <form>
+        <div class="form-group">
+            <label for="nota1">Digite a 1ª nota: </label><br>
+            <input name="nota1" type="number" placeholder="0" id="nota1"><br>
+            <label for="peso1">Digite o peso da 1ª nota: </label><br>
+            <input name="peso1" type="number" placeholder="0" id="peso1"><br>
+            <label for="nota2">Digite a 2ª nota: </label><br>
+            <input name="nota2" type="number" placeholder="0" id="nota2"><br>
+            <label for="peso2">Digite o peso da 2ª nota: </label><br>
+            <input name="peso2" type="number" placeholder="0" id="peso2"><br>
+
+            <label for="media"> A media é :</label><br>
+            <input name="media" type="number" placeholder="0" id="media" readonly><br>
+
+            <h6>
+                <input type="button" class="btn btn-primary" onclick="pesonota()" value="MÉDIA">
+            </h6>
+        </div>
+    </form>
+    <script>
+        function pesonota() {
+            //recuperação de entrada de dados
+
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let peso1 = parseFloat(document.getElementById("peso1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let peso2 = parseFloat(document.getElementById("peso2").value);
+
+            //processamento
+
+            let media = ((nota1 * peso1) + (nota2 * peso2)) / (peso1 + peso2);
+
+            console.log(media);
+
+            //saida
+            document.getElementById("media").value = media;
+        }
+    </script>
+
+</body>
+
+</html>
