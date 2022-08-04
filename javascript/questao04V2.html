@@ -11,9 +11,9 @@
     <form>
         <div class="form-group">
             <label for="salarioinicial">Salário Inicial: </label><br>
-            <input name="salarioinicial" type="number" placeholder="0" id="salarioinicial"><br>
+            <input name="salarioinicial" type="number" placeholder="0" onchange="novosalario()" id="salarioinicial"><br>
             <label for="porcentagem">Porcetagem de Aumento: </label><br>
-            <input name="porcentagem" type="number" placeholder="0" id="porcentagem"><br>
+            <input name="porcentagem" type="number" placeholder="0" onchange="novosalario()" id="porcentagem"><br>
 
             <label for="novosalarioex">O seu novo salário é: </label><br>
             <input name="novosalarioex" type="number" placeholder="0" readonly id="novosalarioex"><br>

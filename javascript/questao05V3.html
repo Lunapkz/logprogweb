@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 05V3</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/meucss.css" rel="stylesheet">
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="salbruto">Salário Bruto: </label><br>
+            <input name="salbruto" type="number" placeholder="0" onchange="salarioliquid()" id="salbruto"><br>
+            <label for="dependen">Número de Dependentes: </label><br>
+            <input name="dependen" type="number" placeholder="0" onchange="salarioliquid()" id="dependen"><br>
+            <label for="salfamil">Salário Família: </label><br>
+            <input name="salfamil" type="number" value="32" id="salfamil" readonly><br>
+            <label for="imposto">Imposto: </label><br>
+            <input name="imposto" type="number" value="27.5" id="imposto" readonly><br>
+
+            <label for="salarioliquido"> O seu Salário liquido é: :</label><br>
+            <input name="salarioliquido" type="number" placeholder="0" id="salarioliquido" readonly><br>
+
+            <h6>
+                <input type="button" class="btn btn-primary" onclick="salarioliquid()" value="MÉDIA">
+            </h6>
+
+        </div>
+    </form>
+    <script src="exemplos.js"></script>
+</body>
+
+</html>

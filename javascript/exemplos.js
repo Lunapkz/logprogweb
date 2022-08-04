@@ -117,7 +117,7 @@ function novosalario() {
     document.getElementById("novosalarioex").value = novosalario;
 
 }
-function salarionovoAlert() {
+function novosalarioAlert() {
     //recuperação de entrada de dados
     let salarioinicial = parseFloat(window.prompt("Salário Inicial: "));
     let porcentagem = parseFloat(window.prompt("Porcetagem de Aumento: "));
@@ -130,13 +130,30 @@ function salarionovoAlert() {
     window.alert("O seu novo salário é: " + novosalario);
 
 }
+function salarioliquid() {
+    var salbruto = parseFloat(document.getElementById("salbruto").value);
+    var dependen = parseFloat(document.getElementById("dependen").value);
+    var salfamil = parseFloat(document.getElementById("salfamil").value);
+    var imposto = parseFloat(document.getElementById("imposto").value);
+
+    //processamento
+    var calc1 = salbruto + (dependen * salfamil);
+
+    var salarioliquido = calc1 - (calc1 * imposto) / 100;
+
+    console.log(salarioliquido);
+
+    //saida
+    document.getElementById("salarioliquido").value = salarioliquido;
+
+}
 function salarioliquidoAlert() {
     //recuperação de entrada de dados
 
-    let salariobase = parseFloat(window.prompt("Salário Bruto: ").value);
-    let dependentes = parseFloat(window.prompt("Número de Dependentes: ").value);
-    let salariofami = parseFloat(window.prompt("Salário Família: ").value);
-    let imposto = parseFloat(window.prompt("Imposto: ").value);
+    let salariobase = parseFloat(window.prompt("Salário Bruto: "));
+    let dependentes = parseFloat(window.prompt("Número de Dependentes: "));
+    let salariofami = parseFloat(window.prompt("Salário Família: "));
+    let imposto = parseFloat(window.prompt("Imposto: "));
 
     //processamento
 
@@ -148,6 +165,31 @@ function salarioliquidoAlert() {
 
     //saida
     window.alert("O seu salário liquido é: " + salarioliquido);
+}
+function novovalor() {
+
+    var valoranti = parseFloat(document.getElementById("valoranti").value);
+    var valornovo = parseFloat(document.getElementById("valornovo").value);
+
+    var aumento = ((valornovo - valoranti) / valoranti) * 100;
+
+    console.log(aumento);
+    //saida
+    document.getElementById("novovalorr").value = aumento;
+
+}
+function novovalorAlert() {
+
+    let valoranti = parseFloat(window.prompt("O valor Antigo do Produto: "));
+    let valornovo = parseFloat(window.prompt("O valor Novo do Produto: "));
+
+    var aumento = ((valornovo - valoranti) / valoranti) * 100;
+
+    console.log(aumento);
+
+    //saida
+    window.alert("A porcentagem de aumento  é: " + aumento + "%");
+
 }
 function calculaArea2() {
     //recuperação de entradas de dados

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 06V3</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/meucss.css" rel="stylesheet">
+</head>
+
+<body>
+    <form>
+        <div class="form-group">
+            <label for="valoranti">O valor Antigo do Produto: </label><br>
+            <input name="valoranti" type="number" placeholder="0" onchange="novovalor()" id="valoranti"><br>
+            <label for="valornovo">O valor Novo do Produto: </label><br>
+            <input name="valornovo" type="number" placeholder="0" onchange="novovalor()" id="valornovo"><br>
+
+
+            <label for="novovalorr">A porcentagem de aumento é: </label><br>
+            <input name="novovalorr" type="number" placeholder="0" id="novovalorr" readonly><br>
+
+            <h6>
+                <input type="button" class="btn btn-primary" onclick="novovalor()" value="MÉDIA">
+            </h6>
+        </div>
+    </form>
+    <script src="exemplos.js"></script>
+</body>
+
+</html>
