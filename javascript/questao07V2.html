@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 07V2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/meucss.css" rel="stylesheet">
+</head>
+
+<body>
+    <form>
+        <div class="form-group">
+            <label for=raio">O tamanho dos raios: </label><br>
+            <input name="raio" type="number" placeholder="0" onchange="raio()" id="valoranti"><br>
+
+
+            <label for="novovalorr">A porcentagem de aumento  é: </label><br>
+            <input name="novovalorr" type="number" placeholder="0" id="novovalorr" readonly><br>
+
+            <h6>
+                <input type="button" class="btn btn-primary" onclick="novovalor()" value="MÉDIA">
+            </h6>
+        </div>
+    </form>
+    <script>
+        function novovalor(){
+            
+            var valoranti = parseFloat(document.getElementById("valoranti").value);
+            var valornovo = parseFloat(document.getElementById("valornovo").value);
+            
+            var aumento = ((valornovo-valoranti)/valoranti)*100;
+
+            console.log(aumento);
+            //saida
+            document.getElementById("novovalorr").value = aumento;
+
+        }
+    </script>
+</body>
+
+</html>

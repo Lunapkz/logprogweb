@@ -191,16 +191,24 @@ function novovalorAlert() {
     window.alert("A porcentagem de aumento  é: " + aumento + "%");
 
 }
-function calculaArea2() {
+function raioAlert() {
     //recuperação de entradas de dados
-    var bas = document.getElementById("base").value;
-    let alt = document.getElementById("altura").value;
+    let raio = parseFloat(window.prompt ("Tamanho do Raio: "));
 
     //processamento
-    var area = (base * altura) / 2;
+    var pi = 3.1415;
+    var perimetro = 2 * pi* raio;  
+    var diametro = 2 * raio;
+    var area = pi * (raio * raio);
+    var volume= ( 4 * pi * (raio * raio * raio)) / 3; 
+   
 
     //saida
-    document.getElementById("area").value = area;
+    window.alert("Diâmetro: " + diametro );
+    window.alert("Perimetro: " + perimetro );
+    window.alert("Área: " + area );
+    window.alert("Volume: " + volume );
+   
 }
 
 function sd() {
