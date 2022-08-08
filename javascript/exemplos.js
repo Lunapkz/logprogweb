@@ -203,10 +203,10 @@ function raioo() {
     var volume = (4 * pi * (raio * raio * raio)) / 3;
 
     //saida
-    document.getElementById("perimetro").value = perimetro;
-    document.getElementById("diametro").value = diametro;
-    document.getElementById("area").value = diametro;
-    document.getElementById("volume").value = volume;
+    document.getElementById("perimetro").value = +(perimetro.toFixed(2));
+    document.getElementById("diametro").value = +(diametro.toFixed(2));
+    document.getElementById("area").value = +(area.toFixed(2));
+    document.getElementById("volume").value = +(volume.toFixed(2));
 
 }
 
@@ -223,10 +223,10 @@ function raioAlert() {
 
 
     //saida
-    window.alert("Diâmetro: " + diametro);
-    window.alert("Perimetro: " + perimetro);
-    window.alert("Área: " + area);
-    window.alert("Volume: " + volume);
+    window.alert("Diâmetro: " + (diametro.toFixed(2)));
+    window.alert("Perimetro: " + (perimetro.toFixed(2)));
+    window.alert("Área: " + (area.toFixed(2)));
+    window.alert("Volume: " + (volume.toFixed(2)));
 
 }
 

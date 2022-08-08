@@ -47,17 +47,11 @@
             var area = pi * (raio * raio);
             var volume = (4 * pi * (raio * raio * raio)) / 3;
 
-            const perimetroRound = +(perimetro.toFixed(1))
-
-           
-
-            console.log(typeof perimetroRound)
-
             //saida
-            document.getElementById("perimetro").value = perimetro;
-            document.getElementById("diametro").value = diametro;
-            document.getElementById("area").value = diametro;
-            document.getElementById("volume").value = volume;
+            document.getElementById("perimetro").value = + (perimetro.toFixed(2));
+            document.getElementById("diametro").value = (diametro.toFixed(2));
+            document.getElementById("area").value = (area.toFixed(2));
+            document.getElementById("volume").value = (volume.toFixed(2));
 
         }
     </script>
