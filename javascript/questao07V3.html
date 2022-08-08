@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Questão 07V2</title>
+    <title>Questão 07V3</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/meucss.css" rel="stylesheet">
 </head>
@@ -35,32 +35,7 @@
             </h6>
         </div>
     </form>
-    <script>
-        function raioo() {
-
-            var  pi = parseFloat(document.getElementById("pi").value);
-            var  raio = parseFloat(document.getElementById("raio").value);
-
-            
-            var perimetro = 2 * pi * raio;
-            var diametro = 2 * raio;
-            var area = pi * (raio * raio);
-            var volume = (4 * pi * (raio * raio * raio)) / 3;
-
-            const perimetroRound = +(perimetro.toFixed(1))
-
-           
-
-            console.log(typeof perimetroRound)
-
-            //saida
-            document.getElementById("perimetro").value = perimetro;
-            document.getElementById("diametro").value = diametro;
-            document.getElementById("area").value = diametro;
-            document.getElementById("volume").value = volume;
-
-        }
-    </script>
+    <script src="exemplos.js"></script>
 </body>
 
 </html>

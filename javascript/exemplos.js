@@ -191,24 +191,43 @@ function novovalorAlert() {
     window.alert("A porcentagem de aumento  é: " + aumento + "%");
 
 }
+function raioo() {
+
+    var pi = parseFloat(document.getElementById("pi").value);
+    var raio = parseFloat(document.getElementById("raio").value);
+
+
+    var perimetro = 2 * pi * raio;
+    var diametro = 2 * raio;
+    var area = pi * (raio * raio);
+    var volume = (4 * pi * (raio * raio * raio)) / 3;
+
+    //saida
+    document.getElementById("perimetro").value = perimetro;
+    document.getElementById("diametro").value = diametro;
+    document.getElementById("area").value = diametro;
+    document.getElementById("volume").value = volume;
+
+}
+
 function raioAlert() {
     //recuperação de entradas de dados
-    let raio = parseFloat(window.prompt ("Tamanho do Raio: "));
+    let raio = parseFloat(window.prompt("Tamanho do Raio: "));
 
     //processamento
     var pi = 3.1415;
-    var perimetro = 2 * pi* raio;  
+    var perimetro = 2 * pi * raio;
     var diametro = 2 * raio;
     var area = pi * (raio * raio);
-    var volume= ( 4 * pi * (raio * raio * raio)) / 3; 
-   
+    var volume = (4 * pi * (raio * raio * raio)) / 3;
+
 
     //saida
-    window.alert("Diâmetro: " + diametro );
-    window.alert("Perimetro: " + perimetro );
-    window.alert("Área: " + area );
-    window.alert("Volume: " + volume );
-   
+    window.alert("Diâmetro: " + diametro);
+    window.alert("Perimetro: " + perimetro);
+    window.alert("Área: " + area);
+    window.alert("Volume: " + volume);
+
 }
 
 function sd() {
