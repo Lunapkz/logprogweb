@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type">
+    <meta content="text/html" charset="UTF-8">
+    <title>Cadastro de Clientes</title>
+</head>
+
+<body>
+    <form method="post" name="formCadastro" action="http://localhost/cadcliente.php">
+        <h1>Cadastro de Clientes</h1>
+        <table width="100%">
+            <tr>
+                <th width="18%">Nome</th>
+                <th width="82%"><input type="text" name="txtNome"></th>
+            </tr>
+            <tr>
+                <td>CPF</td>
+                <td><input name="txtCPF" type="text" maxlength="14"></td>
+            </tr>
+            <tr>
+                <td>Endereço</td>
+                <td><textarea name="textEndereco" cols="30" rows="4"></textarea></td>
+            </tr>
+            <th>Estado</th>
+            <select name="listEstados">
+                <option value="BA">Bahia</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+            </select> 
+        </table>
+    </form>
+</body>
+
+</html>
